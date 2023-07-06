@@ -100,4 +100,4 @@ Firstly, I added Multi-factor Authentication (MFA) for root user and Admin user.
 For this I used Microsoft authenticator app for smartphones.
 Also I used AWS CloudTrail which logs Admin actions. It logs them and I created Cloudwatch metric for these logs.
 If there are too many policy attaching or detaching, adding or deleting IAM users during 30-60 last seconds (suspicious actions) - CloudWatch moves
-to Alarm state, sends event AWS SNS topic (Simple Notification Service). This topic sends letter about these actions to definite registrated email in AOL Mail (oversecuredtesttask@aol.com).
+to Alarm state, sends event to AWS SNS topic (Simple Notification Service). This topic sends letter about these actions to definite registrated email in AOL Mail (oversecuredtesttask@aol.com).
