@@ -75,7 +75,7 @@ Also don't forget to clear browser cache during checking workability of this tes
 ## Working diagram
 
 
-![Working diagram.png](..%2F..%2F..%2FDownloads%2FWorking%20diagram.png)
+![Working diagram.png](Working_diagram.png)
 
 
 ## Some additional explanations 
