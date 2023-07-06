@@ -86,3 +86,18 @@ with AWS WAF (AWS Web Application Firewall) where I can define ip set where I de
 Speaking about SSH connection, here I connect to EC2 instances directly so I created separate security group where I defined inbound rules
 for SSH connections to any EC2 instances in Auto Scaling Group.
 These inbound rules in security group and ip set in AWS WAF can be edited by inspector according to task requirements.
+
+
+Why do you get warnings, trying to go in https://beloversecured.net? 
+Https is protocol that requires certificate. Certificate that is subscribed by
+authoritative services.
+For https link working I created and subscribed certificate just on local machine with a help of OpenSSL tool.
+
+## Cybersecurity aspect
+
+
+Firstly, I added Multi-factor Authentication (MFA) for root user and Admin user.
+For this I used Microsoft authenticator app for smartphones.
+Also I used AWS CloudTrail which logs Admin actions. It logs them and I created Cloudwatch metric for these logs.
+If there are too many policy attaching or detaching, adding or deleting IAM users during 30-60 last seconds (suspicious actions) - CloudWatch moves
+to Alarm state, sends event AWS SNS topic (Simple Notification Service). This topic sends letter about these actions to definite registrated email in AOL Mail (oversecuredtesttask@aol.com).
